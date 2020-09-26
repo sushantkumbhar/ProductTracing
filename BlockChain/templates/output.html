@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+* {
+	box-sizing: border-box;
+}
+
+.mainheader {
+  text-align: center;
+  background: green;
+  color: white;
+  font-size: 20px;
+  border-radius: 0px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  position: fixed;
+}
+
+body {
+  font-family: 'Open Sans', serif;
+  color: white;
+  background : black
+
+}
+
+.split {
+  height: 50%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 1;
+  overflow-x: hidden;
+  padding-top: 5px;
+}
+
+.left {
+  left: 0;
+  background-color: green;
+  border-radius: 5px;
+}
+
+.right {
+  right: 0;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.center {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: green;
+   color: white;
+   text-align: center;
+   border-radius: 0px;
+}
+
+</style>
+</head>
+<body>
+<div class="mainheader">
+  	<h1>Product Tracing Using BlockChain</h1>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="split left">
+  <div class="center">
+	<p>
+		<br>
+		<br>
+		<br>
+		<i class="italics">Thank you for submitting the Product Details.</i>
+		<br>
+		<br>
+		<br>
+		<i class="italics">Please use the displayed QR Code for Tracking the path of your product  {{qrImagePath}}</i>
+		<br>
+		<br>
+		<br>
+		<i class="italics">The QR Details are :  {{qrImagePath}}</i>
+	</p>
+  </div>
+</div>
+
+<div class="split right">
+  <div class="center">
+	<br>
+	<br>
+	<br>
+	<img src="{{ url_for('static', filename=qrImagePath ) }}" alt="QR Code Image">
+  </div>
+</div>
+
+<div class="footer">
+  <p>Developed by BCT-TIBCO 2020</p>
+</div>
+
+</body>
+</html>

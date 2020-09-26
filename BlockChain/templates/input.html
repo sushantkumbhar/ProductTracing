@@ -1,0 +1,178 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 	<link rel="stylesheet" href="{{ url_for('static', filename='css/input.css') }}">
+    <title>Input Data Page</title>
+
+{% endblock %}
+
+{% block body %}
+
+
+	<div class="mainheader">
+  		<h1>Product Tracing Using BlockChain</h1>
+	</div>
+	<br>
+	<br>
+	<div class="container center">
+	    <form action="/addblocks" method="POST" id="form" class="form">
+			<br><br>
+			<div class="internalheader">
+		    	<h2>Manufacturer Details</h2>
+	    	</div>
+			<br>
+			<br>
+			<fieldset>
+				<legend>Mandatory Details</legend>
+				<br>
+		    	<div class="form-control">
+			    	<label for="productid1">Product-ID :</label>
+			    	<input type="text" placeholder="Enter your Product-ID here" id="productid1" name="productid1" required />
+			    	<i class="fas fa-check-circle"></i>
+			    	<i class="fas fa-exclamation-circle"></i>
+			    	<small>Error message</small>
+		    	</div>
+		    	<div class="form-control">
+			    	<label for="productSerialId1">Product Serial-ID :</label>
+			    	<input type="text" placeholder="Enter your Product Serial-ID here" id="productSerialId1" name="productSerialId1" required  />
+			    	<i class="fas fa-check-circle"></i>
+			    	<i class="fas fa-exclamation-circle"></i>
+			    	<small>Error message</small>
+		    	</div>
+		    	<div class="form-control">
+			    	<label for="productName1">Product Name :</label>
+			    	<input type="text" placeholder="Enter Product Name here" id="productName1" name="productName1" required  />
+			    	<i class="fas fa-check-circle"></i>
+			    	<i class="fas fa-exclamation-circle"></i>
+			    	<small>Error message</small>
+		    	</div>
+				<div class="form-control">
+					<label for="originpt">Origin Point :</label>
+					<input type="text" placeholder="Enter Origin Point here" id="originpt" name="originpt" required  />
+					<i class="fas fa-check-circle"></i>
+					<i class="fas fa-exclamation-circle"></i>
+					<small>Error message</small>
+				</div>
+				<div class="form-control">
+					<label for="manufacturerpt1">Manufacturer Point :</label>
+					<input type="text" placeholder="Enter Manufacturer Point here" id="manufacturerpt1" name="manufacturerpt1" required  />
+					<i class="fas fa-check-circle"></i>
+					<i class="fas fa-exclamation-circle"></i>
+					<small>Error message</small>
+				</div>
+				<br>
+			</fieldset>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<div class="internalheader">
+		    	<h2>Transportation Details</h2>
+	    	</div>
+			<br>
+			<br>
+			<fieldset>
+				<legend>Mandatory Details</legend>
+				<br>
+				<br>
+				<div class="form-control">
+			    	<label for="productid2">Product-ID :</label>
+			    	<input type="text" placeholder="Enter your Product-ID here" id="productid2" name="productid2" required />
+			    	<i class="fas fa-check-circle"></i>
+			    	<i class="fas fa-exclamation-circle"></i>
+			    	<small>Error message</small>
+		    	</div>
+		    	<div class="form-control">
+			    	<label for="productSerialId2">Product Serial-ID :</label>
+			    	<input type="text" placeholder="Enter your Product Serial-ID here" id="productSerialId2" name="productSerialId2" required  />
+			    	<i class="fas fa-check-circle"></i>
+			    	<i class="fas fa-exclamation-circle"></i>
+			    	<small>Error message</small>
+		    	</div>
+		    	<div class="form-control">
+			    	<label for="productName2">Product Name :</label>
+			    	<input type="text" placeholder="Enter Product Name here" id="productName2" name="productName2" required  />
+			    	<i class="fas fa-check-circle"></i>
+			    	<i class="fas fa-exclamation-circle"></i>
+			    	<small>Error message</small>
+		    	</div>
+				<div class="form-control">
+					<label for="manufacturerpt2">Manufacturer Point :</label>
+					<input type="text" placeholder="Enter Manufacturer Point here" id="manufacturerpt2" name="manufacturerpt2" required  />
+					<i class="fas fa-check-circle"></i>
+					<i class="fas fa-exclamation-circle"></i>
+					<small>Error message</small>
+				</div>
+				<div class="form-control">
+					<label for="distributorpt1">Distributor Point :</label>
+					<input type="text" placeholder="Enter Distributor Point here" id="distributorpt1" name="distributorpt1" required  />
+					<i class="fas fa-check-circle"></i>
+					<i class="fas fa-exclamation-circle"></i>
+					<small>Error message</small>
+				</div>
+			</fieldset>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<div class="internalheader">
+		    	<h2>Retailer Details</h2>
+	    	</div>
+			<br>
+			<br>
+			<fieldset>
+				<legend>Mandatory Details</legend>
+				<br>
+				<div class="form-control">
+			    	<label for="productid3">Product-ID :</label>
+			    	<input type="text" placeholder="Enter your Product-ID here" id="productid3" name="productid3" required />
+			    	<i class="fas fa-check-circle"></i>
+			    	<i class="fas fa-exclamation-circle"></i>
+			    	<small>Error message</small>
+		    	</div>
+		    	<div class="form-control">
+			    	<label for="productSerialId3">Product Serial-ID :</label>
+			    	<input type="text" placeholder="Enter your Product Serial-ID here" id="productSerialId3" name="productSerialId3" required  />
+			    	<i class="fas fa-check-circle"></i>
+			    	<i class="fas fa-exclamation-circle"></i>
+			    	<small>Error message</small>
+		    	</div>
+		    	<div class="form-control">
+			    	<label for="productName3">Product Name :</label>
+			    	<input type="text" placeholder="Enter Product Name here" id="productName3" name="productName3" required  />
+			    	<i class="fas fa-check-circle"></i>
+			    	<i class="fas fa-exclamation-circle"></i>
+			    	<small>Error message</small>
+		    	</div>
+				<div class="form-control">
+					<label for="distributorpt2">Distributor Point :</label>
+					<input type="text" placeholder="Enter Distributor Point here" id="distributorpt2" name="distributorpt2" required  />
+					<i class="fas fa-check-circle"></i>
+					<i class="fas fa-exclamation-circle"></i>
+					<small>Error message</small>
+				</div>
+				<div class="form-control">
+					<label for="retailerpt">Retailer Point :</label>
+					<input type="text" placeholder="Enter Retailer Point here" id="retailerpt" name="retailerpt" required  />
+					<i class="fas fa-check-circle"></i>
+					<i class="fas fa-exclamation-circle"></i>
+					<small>Error message</small>
+				</div>
+			</fieldset>
+			<br>
+			<br>
+		    <button type="submit" >Submit</button>
+	    </form>
+    </div>
+	<br>
+	<br>
+	<div class="footer">
+  		<p>Developed by BCT-TIBCO 2020</p>
+	</div>
+
+{% endblock %}
