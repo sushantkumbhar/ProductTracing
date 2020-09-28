@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content">
+    <!-- A CardView that contains a TextView -->
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        card_view:cardPreventCornerOverlap="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardElevation="2dp"
+        card_view:cardBackgroundColor="@color/cardview_light_background"
+        card_view:cardCornerRadius="4dp">
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:orientation="vertical"
+     android:layout_height="match_parent">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:textAlignment="center"
+    android:textColor="@color/colorPrimary"
+    android:textSize="30dp"
+    android:text="Let us know what you think!"
+    />
+     <RatingBar
+         android:id="@+id/rb_vvm"
+         android:theme="@style/RatingBar"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center_horizontal"
+         android:layout_marginBottom="20dp"
+         android:layout_marginTop="20dp"
+         android:numStars="5"
+         android:stepSize="1"
+         android:rating="5" />
+
+     <EditText
+         android:id="@+id/editTextTextMultiLine"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_margin="10dp"
+         android:textColor="@color/colorPrimaryDark"
+         android:textColorHint="@color/colorPrimaryDark"
+         android:textColorLink="@color/colorPrimaryDark"
+         android:textColorHighlight="@color/colorPrimaryDark"
+         android:gravity="start|top"
+         android:inputType="textMultiLine"
+         android:tooltipText="Comments"/>
+
+     <Button
+         android:id="@+id/button"
+         android:layout_margin="10dp"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center_horizontal"
+         android:textAlignment="center"
+         android:text="Submit Feedback" />
+ </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
